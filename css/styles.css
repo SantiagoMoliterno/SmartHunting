@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+body {
+  padding: 0 250px;
+  background: #d9d9d9; }
+
+.header {
+  background: url(../assets/header-background.webp);
+  height: 48rem; }
+  .header .headerNav {
+    padding: 1rem 2rem 0 2rem;
+    display: flex;
+    justify-content: space-between; }
+    .header .headerNav .headerNav-Logo img {
+      width: 7rem; }
+    .header .headerNav .headerNav-Menu {
+      display: flex;
+      padding: 1rem 0 0 0; }
+      .header .headerNav .headerNav-Menu .menu-list {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        height: fit-content; }
+        .header .headerNav .headerNav-Menu .menu-list .menu-item {
+          position: relative; }
+          .header .headerNav .headerNav-Menu .menu-list .menu-item::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: .2rem;
+            background: #2bd9da;
+            z-index: 0;
+            transition: 200ms ease;
+            bottom: -5px; }
+          .header .headerNav .headerNav-Menu .menu-list .menu-item:hover::before {
+            height: 2rem;
+            border-radius: .5rem;
+            z-index: 1; }
+          .header .headerNav .headerNav-Menu .menu-list .menu-item a {
+            color: #fff;
+            font-weight: bold;
+            padding: 0 .3rem;
+            z-index: 2; }
+  .header .headerHero {
+    display: flex; }
+    .header .headerHero .headerHero-text {
+      width: 50%;
+      height: 32rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .header .headerHero .headerHero-text h1 {
+        color: #fff; }
+        .header .headerHero .headerHero-text h1 .firstLine {
+          font-size: 3.5rem; }
+        .header .headerHero .headerHero-text h1 .secondLine {
+          font-size: 4rem; }
+        .header .headerHero .headerHero-text h1 .thirdLine {
+          font-size: 4.5rem; }
+          .header .headerHero .headerHero-text h1 .thirdLine .cyan {
+            color: #2bd9da; }
+        .header .headerHero .headerHero-text h1 .fourthLine {
+          font-size: 4.5rem;
+          color: #2bd9da; }
+    .header .headerHero .headerHero-img {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .header .headerSocial {
+    display: flex;
+    gap: 1rem;
+    padding-left: 2rem;
+    align-items: center;
+    height: 5rem; }
+    .header .headerSocial i {
+      color: #fff;
+      font-size: 2rem; }
+      .header .headerSocial i:hover {
+        color: #2bd9da; }

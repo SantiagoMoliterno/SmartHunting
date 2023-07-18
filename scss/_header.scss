@@ -1,0 +1,103 @@
+.header {
+    background: url(../assets/header-background.webp);
+    height: 48rem;
+    .headerNav {
+        padding: 1rem 2rem 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        .headerNav-Logo {
+            img {
+                width: 7rem;
+            }
+        }
+        .headerNav-Menu {
+            display: flex;
+            padding: 1rem 0 0 0;
+            .menu-list {
+                list-style: none;
+                display: flex;
+                gap: 1.5rem;
+                height: fit-content;
+                .menu-item {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: .2rem;
+                        background: $textCyan;
+                        z-index: 0;
+                        transition: 200ms ease;
+                        bottom: -5px;
+                    }
+                    &:hover {
+                        &::before {
+                            height: 2rem;
+                            border-radius: .5rem;
+                            z-index: 1;
+                        }
+                    }
+                    a {
+                        color: $textWhite;
+                        font-weight: bold;
+                        padding: 0 .3rem;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+
+    .headerHero {
+        display: flex;
+        .headerHero-text {
+            width: 50%;
+            height: 32rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                color: $textWhite;
+                .firstLine {
+                    font-size: 3.5rem;
+                }
+                .secondLine {
+                    font-size: 4rem;
+                }
+                .thirdLine {
+                    font-size: 4.5rem;
+                    .cyan {
+                        color: $textCyan;
+                    }
+                }
+                .fourthLine {
+                    font-size: 4.5rem;
+                    color: $textCyan;
+                }
+            }
+        }
+        
+        .headerHero-img {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .headerSocial {
+        display: flex;
+        gap: 1rem;
+        padding-left: 2rem;
+        align-items: center;
+        height: 5rem;
+        i {
+            color: $textWhite;
+            font-size: 2rem;
+            &:hover {
+                color: $textCyan;
+            }
+        }
+    }
+}
