@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globales */
+ 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #2c2c2c;
+    padding: 2rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ESTILOS CABECERA */
+
+.header {
+    width: 70vw;
+    height: 80vh;
+    background: url(../assets/header-background.webp);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 3fr .7fr .6fr;
+    grid-template-areas: 
+    "headerNav headerNav"
+    "headerText headerImage"
+    "headerButon headerImage"
+    "headerSocial headerSocial";
+    border-radius: 1rem 1rem 0 0;
+}
+
+.headerNav {
+    grid-area: headerNav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background: rgba(0, 0, 0, 0.123);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.headerNav img {
+    height: 6.5rem;
+}
+
+.headerNav .headerNav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.headerNav-menu .menuLinks,
+.headerNav-menu .menuBtnLink {
+    text-decoration: none;
+    color: #fff;
+}
+
+.headerNav-menu .menuLinks:hover {
+    font-weight: bold;
+    border-bottom: 2px solid rgb(13, 175, 175);
+}
+
+.headerNav-menu .menuBtnLink {
+    font-weight: bold;
+}
+
+.menuBtn {
+    background: rgb(13, 175, 175);
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    display: block;
+    margin-left: 2rem;
+}
+
+.headerText {
+    grid-area: headerText;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerText h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+.headerText .line2 {
+    font-size: 3.44rem;
+}
+
+.headerText .line3 {
+    font-size: 3.89rem;
+}
+
+.headerText .line4 {
+    font-size: 4.09rem;
+}
+
+.headerText .textColor {
+    color: rgb(13, 175, 175);
+}
+
+.headerImage {
+    grid-area: headerImage;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerButon {
+    grid-area: headerButon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerButon button {
+    padding: .5rem 1.5rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #fff;
+    background: #fff;
+    transition: 300ms ease-in-out;
+}
+
+.headerButon a {
+    color: rgb(13, 175, 175);
+    font-weight: bold;
+}
+
+.headerButon button:hover {
+    background: #fff;
+}
+
+.headerButon button:hover a {
+    color: rgb(6, 66, 66);
+}
+
+.headerSocial {
+    grid-area: headerSocial;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.123);
+}
+
+.headerSocial img {
+    filter: invert(99%) sepia(0%) saturate(166%) hue-rotate(288deg) brightness(117%) contrast(100%);
+}
+
+.headerSocial img:hover {
+    filter: invert(60%) sepia(100%) saturate(334%) hue-rotate(131deg) brightness(100%) contrast(91%);
+}
+
+/* ESTILOS DEL MAIN */
+.main {
+    width: 70vw;
+    background: #fff;
+}
+
+/* SECCION 1 */
+.section1 {
+    height: 44rem;
+    display: grid;
+    grid-template-columns: 1fr .7fr 1.5fr;
+    grid-template-rows: 3fr 1.1fr 1.1fr;
+    grid-template-areas: 
+    "sec1Aside sec1Text sec1Text"
+    "sec1Aside sec1Photo-small1 sec1Photo-big"
+    "sec1Aside sec1Photo-small2 sec1Photo-big";
+}
+
+.sec1Aside {
+    grid-area: sec1Aside;
+    background: url(../assets/main-section1-aside.webp);
+    color: white;
+}
+
+.sec1Aside div {
+    height: 50%;
+}
+
+.sec1Aside .asideBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem 4.5rem;
+}
+
+.asideBottom h2 {
+    margin-bottom: 1rem;
+}
+
+.asideBottom a {
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    padding: .3rem .5rem;
+    display: flex;
+    align-items: center;
+    transition: .1s ease-in-out;
+}
+
+.asideBottom a i {
+    margin-left: .7rem;
+    font-size: .7rem;
+}
+
+.asideBottom a:hover {
+    background: black;
+    border-radius: .3rem;
+    border-bottom: 2px solid rgb(6, 66, 66);
+}
+
+.sec1Text {
+    grid-area: sec1Text;
+    padding: 4rem 5.5rem;
+}
+
+.sec1Text span {
+    font-weight: bold;
+    color: rgb(83, 83, 83);
+    border-bottom: 2px solid rgb(13, 175, 175);
+}
+
+.sec1Text h2 {
+    color: rgb(13, 175, 175);
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+}
+
+.sec1Text .subtitle {
+    margin-left: 2rem;
+    font-weight: bold;
+    color: rgb(83, 83, 83);
+    margin-bottom: 2rem;
+}
+
+.sec1Text .info {
+    margin-left: 2rem;
+    margin-right: 10rem;
+    color: rgb(83, 83, 83);
+}
+
+.sec1Photo-small1 {
+    grid-area: sec1Photo-small1;
+    background: url(../assets/main-section1-firstImage.webp);
+    background-size: cover;
+}
+
+.sec1Photo-small2 {
+    grid-area: sec1Photo-small2;
+    background: url(../assets/main-section1-secondImage.webp);
+    background-size: cover;
+}
+
+.sec1Photo-big {
+    grid-area: sec1Photo-big;
+    background: url(../assets/main-section1-bigImage.webp);
+    background-size: cover;
+}
+
+/* SECCION 2 */
+
+.section2 {
+    padding: 3rem 4rem;
+}
+
+.section2 h2 {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(13, 175, 175);
+    font-size: 1.8rem;
+
+}
+
+.sec2Servicios {
+    display: flex;
+    justify-content: center;
+    gap: 9rem;
+    margin-top: 6rem;
+}
+
+.cardServicios {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.cardServicios img {
+    max-width: 80%;
+    height: auto;
+    align-self: center;
+}
+
+.cardServicios h3 {
+    text-align: center;
+}
+
+.hunting h3 {
+    font-size: 1.5rem;
+    color: rgb(83, 83, 83);
+    border-bottom: 3px solid #26dd83;
+}
+
+.renta h3 {
+    font-size: 1.5rem;
+    color: rgb(83, 83, 83);
+    border-bottom: 3px solid #5febde;
+}
+
+.benchmark h3 {
+    font-size: 1.5rem;
+    color: rgb(83, 83, 83);
+    border-bottom: 3px solid #fee101;
+}
+
+/* SECTION 3 */
+
+.section3 {
+    background: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 4rem;
+}
+
+.section3 h2 {
+    color: #2c2c2c;
+    font-size: 2rem;
+}
+
+.section3 h2 span {
+    color: rgb(10, 141, 141);
+}
+
+.section3 div {
+    background: rgb(10, 141, 141);
+    padding: .5rem 1.3rem;
+    border-radius: 5px;
+}
+
+.section3 a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #30343f;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 3fr 3fr 1fr;
+    grid-template-areas: 
+    "footerLogo footerMenu-Services footerMenu-Partners footerSocial"
+    "footerLogo footerMenu-Contents footerMenu-Candidates footerSocial"
+    "footerCredits footerCredits footerCredits footerCredits";
+    gap: 1.5rem;
+    padding-top: 3rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.footerLogo {
+    grid-area: footerLogo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLogo img {
+    width: 7rem;
+}
+
+.footer nav {
+    align-self: center;
+}
+
+.footer nav h4 {
+    color: rgb(13, 175, 175);
+}
+
+.footer nav li {
+    color: rgb(13, 175, 175);
+}
+
+.footer nav a {
+    text-decoration: none;
+    color: rgb(231, 231, 231);
+}
+
+.footer nav a:hover {
+    border-bottom: 2px solid rgb(13, 175, 175);
+}
+
+.footerMenu-Services {
+    grid-area: footerMenu-Services;
+}
+
+.footerMenu-Contents {
+    grid-area: footerMenu-Contents;
+}
+
+.footerMenu-Partners {
+    grid-area: footerMenu-Partners;
+}
+
+.footerMenu-Candidates {
+    grid-area: footerMenu-Candidates;
+}
+
+.footerSocial {
+    grid-area: footerSocial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footerSocial img {
+    filter: invert(99%) sepia(0%) saturate(166%) hue-rotate(288deg) brightness(117%) contrast(100%);
+}
+
+.footerSocial img:hover {
+    filter: invert(60%) sepia(100%) saturate(334%) hue-rotate(131deg) brightness(100%) contrast(91%);
+}
+
+.footerCredits {
+    grid-area: footerCredits;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.footerCredits span {
+    color: #fff;
+    padding: 1rem 0;
+}
