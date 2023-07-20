@@ -1,0 +1,142 @@
+.header {
+    width: 70vw;
+    height: 80vh;
+    background: url(../assets/header-background.webp);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 3fr .7fr .6fr;
+    grid-template-areas: 
+    "headerNav headerNav"
+    "headerText headerImage"
+    "headerButon headerImage"
+    "headerSocial headerSocial";
+    border-radius: 1rem 1rem 0 0;
+    
+    // NAV BAR
+
+    .headerNav {
+        grid-area: headerNav;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        border-radius: 1rem 1rem 0 0;
+
+        img {
+            height: 6.5rem;
+        }
+
+        .headerNav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .menuItems {
+
+                .menuLinks {
+                    text-decoration: none;
+                    color: $textWhite;
+                    &:hover {
+                        font-weight: bold;
+                        border-bottom: 2px solid $textCyan;
+                    }
+                }
+            }
+
+            .menuBtn {
+                background: rgb(13, 175, 175);
+                padding: .5rem 1rem;
+                border-radius: .4rem;
+                display: block;
+                margin-left: 2rem;
+
+                .menuBtnLink {
+                    text-decoration: none;
+                    color: $textWhite;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    // HERO SECTION
+    .headerText {
+        grid-area: headerText;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+
+            .line2 {
+                font-size: 3.44rem;
+            }
+
+            .line3 {
+                font-size: 3.89rem;
+            }
+
+            .line4 {
+                font-size: 4.09rem;
+            }
+
+            .textColor {
+                color: $textCyan;
+            }
+        }
+
+    }
+
+    .headerImage {
+        grid-area: headerImage;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headerButon {
+        grid-area: headerButon;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            padding: .5rem 1.5rem;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid #fff;
+            background: #fff;
+            &:hover a {
+                color: rgb(6, 66, 66);
+            }
+            a {
+                color: $textCyan;
+                font-weight: bold;
+                transition: 300ms ease-in-out;
+            }
+        }
+    }
+
+    // SOCIAL SECTION
+    .headerSocial {
+        grid-area: headerSocial;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 1rem;
+        background: rgba(0, 0, 0, 0.123);
+
+        img {
+            filter: $SVGFilterWhite;
+            &:hover {
+                filter: $SVGFilterCyan;
+            }
+        }
+    }
+
+}

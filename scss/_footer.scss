@@ -1,0 +1,91 @@
+.footer {
+    background: $footer-bg;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 3fr 3fr 1fr;
+    grid-template-areas: 
+    "footerLogo footerMenu-Services footerMenu-Partners footerSocial"
+    "footerLogo footerMenu-Contents footerMenu-Candidates footerSocial"
+    "footerCredits footerCredits footerCredits footerCredits";
+    gap: 1.5rem;
+    padding-top: 3rem;
+    border-radius: 0 0 1rem 1rem;
+
+    .footerLogo {
+        grid-area: footerLogo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 7rem;
+        }
+    }
+
+    nav {
+        align-self: center;
+
+        h4 {
+            color: $textCyan;
+        }
+
+        li {
+            color: $textCyan;
+
+            a {
+                text-decoration: none;
+                color: $textLightGrey;
+                &:hover {
+                    border-bottom: 2px solid $textCyan;
+                }
+            }
+        }
+    }
+
+    .footerMenu-Services {
+        grid-area: footerMenu-Services;
+    }
+    
+    .footerMenu-Contents {
+        grid-area: footerMenu-Contents;
+    }
+    
+    .footerMenu-Partners {
+        grid-area: footerMenu-Partners;
+    }
+    
+    .footerMenu-Candidates {
+        grid-area: footerMenu-Candidates;
+    }
+    
+    .footerSocial {
+        grid-area: footerSocial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            filter: $SVGFilterWhite;
+            cursor: pointer;
+            &:hover {
+                filter: $SVGFilterCyan;
+            }
+        }
+    }
+
+    .footerCredits {
+        grid-area: footerCredits;
+        background: $black-bg;
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem 3rem;
+        border-radius: 0 0 1rem 1rem;
+
+        span {
+            color: $textWhite;
+            padding: 1rem 0;
+        }
+    }
+}

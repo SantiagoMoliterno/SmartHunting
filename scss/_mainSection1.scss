@@ -1,0 +1,103 @@
+.main {
+    .section1 {
+        height: 44rem;
+        display: grid;
+        grid-template-columns: 1fr .7fr 1.5fr;
+        grid-template-rows: 3fr 1.1fr 1.1fr;
+        grid-template-areas: 
+        "sec1Aside sec1Text sec1Text"
+        "sec1Aside sec1Photo-small1 sec1Photo-big"
+        "sec1Aside sec1Photo-small2 sec1Photo-big";
+
+        .sec1Aside {
+            grid-area: sec1Aside;
+            background: url(../assets/main-section1-aside.webp);
+            color: white;
+
+            div {
+                height: 50%;
+            }
+
+            .asideBottom {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 1rem 4.5rem;
+
+                h2 {
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    color: white;
+                    font-weight: bold;
+                    width: fit-content;
+                    padding: .3rem .5rem;
+                    display: flex;
+                    align-items: center;
+                    transition: .1s ease-in-out;
+                    &:hover {
+                        background: black;
+                        border-radius: .3rem;
+                        border-bottom: 2px solid rgb(6, 66, 66);
+                    }
+
+                    i {
+                        margin-left: .7rem;
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+
+        .sec1Text {
+            grid-area: sec1Text;
+            padding: 4rem 5.5rem;
+
+            span {
+                font-weight: bold;
+                color: $textGrey;
+                border-bottom: 2px solid $textCyan;
+            }
+
+            h2 {
+                color: $textCyan;
+                margin-top: 1rem;
+                margin-left: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                margin-left: 2rem;
+                font-weight: bold;
+                color: $textGrey;
+                margin-bottom: 2rem;
+            }
+
+            .info {
+                margin-left: 2rem;
+                margin-right: 10rem;
+                color: $textGrey;
+            }
+        }
+
+        .sec1Photo-small1 {
+            grid-area: sec1Photo-small1;
+            background: url(../assets/main-section1-firstImage.webp);
+            background-size: cover;
+        }
+
+        .sec1Photo-small2 {
+            grid-area: sec1Photo-small2;
+            background: url(../assets/main-section1-secondImage.webp);
+            background-size: cover;
+        }
+        
+        .sec1Photo-big {
+            grid-area: sec1Photo-big;
+            background: url(../assets/main-section1-bigImage.webp);
+            background-size: cover;
+        }
+
+    }
+}

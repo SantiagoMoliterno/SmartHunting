@@ -9,4 +9,289 @@ a {
   text-decoration: none; }
 
 body {
-  background: #2c2c2c; }
+  background: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0; }
+
+.header {
+  width: 70vw;
+  height: 80vh;
+  background: url(../assets/header-background.webp);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 3fr .7fr .6fr;
+  grid-template-areas: "headerNav headerNav" "headerText headerImage" "headerButon headerImage" "headerSocial headerSocial";
+  border-radius: 1rem 1rem 0 0; }
+  .header .headerNav {
+    grid-area: headerNav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 1rem 1rem 0 0; }
+    .header .headerNav img {
+      height: 6.5rem; }
+    .header .headerNav .headerNav-menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1rem; }
+      .header .headerNav .headerNav-menu .menuItems .menuLinks {
+        text-decoration: none;
+        color: #fff; }
+        .header .headerNav .headerNav-menu .menuItems .menuLinks:hover {
+          font-weight: bold;
+          border-bottom: 2px solid #0dafaf; }
+      .header .headerNav .headerNav-menu .menuBtn {
+        background: #0dafaf;
+        padding: .5rem 1rem;
+        border-radius: .4rem;
+        display: block;
+        margin-left: 2rem; }
+        .header .headerNav .headerNav-menu .menuBtn .menuBtnLink {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold; }
+  .header .headerText {
+    grid-area: headerText;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .header .headerText h1 {
+      color: white;
+      font-size: 3rem; }
+      .header .headerText h1 .line2 {
+        font-size: 3.44rem; }
+      .header .headerText h1 .line3 {
+        font-size: 3.89rem; }
+      .header .headerText h1 .line4 {
+        font-size: 4.09rem; }
+      .header .headerText h1 .textColor {
+        color: #0dafaf; }
+  .header .headerImage {
+    grid-area: headerImage;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .header .headerButon {
+    grid-area: headerButon;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .header .headerButon button {
+      padding: .5rem 1.5rem;
+      font-size: 1.4rem;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #fff;
+      background: #fff; }
+      .header .headerButon button:hover a {
+        color: #064242; }
+      .header .headerButon button a {
+        color: #0dafaf;
+        font-weight: bold;
+        transition: 300ms ease-in-out; }
+  .header .headerSocial {
+    grid-area: headerSocial;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.123); }
+    .header .headerSocial img {
+      filter: invert(99%) sepia(0%) saturate(166%) hue-rotate(288deg) brightness(117%) contrast(100%); }
+      .header .headerSocial img:hover {
+        filter: invert(60%) sepia(100%) saturate(334%) hue-rotate(131deg) brightness(100%) contrast(91%); }
+
+.main {
+  width: 70vw;
+  background: #fff; }
+
+.main .section1 {
+  height: 44rem;
+  display: grid;
+  grid-template-columns: 1fr .7fr 1.5fr;
+  grid-template-rows: 3fr 1.1fr 1.1fr;
+  grid-template-areas: "sec1Aside sec1Text sec1Text" "sec1Aside sec1Photo-small1 sec1Photo-big" "sec1Aside sec1Photo-small2 sec1Photo-big"; }
+  .main .section1 .sec1Aside {
+    grid-area: sec1Aside;
+    background: url(../assets/main-section1-aside.webp);
+    color: white; }
+    .main .section1 .sec1Aside div {
+      height: 50%; }
+    .main .section1 .sec1Aside .asideBottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 1rem 4.5rem; }
+      .main .section1 .sec1Aside .asideBottom h2 {
+        margin-bottom: 1rem; }
+      .main .section1 .sec1Aside .asideBottom a {
+        color: white;
+        font-weight: bold;
+        width: fit-content;
+        padding: .3rem .5rem;
+        display: flex;
+        align-items: center;
+        transition: .1s ease-in-out; }
+        .main .section1 .sec1Aside .asideBottom a:hover {
+          background: black;
+          border-radius: .3rem;
+          border-bottom: 2px solid #064242; }
+        .main .section1 .sec1Aside .asideBottom a i {
+          margin-left: .7rem;
+          font-size: .7rem; }
+  .main .section1 .sec1Text {
+    grid-area: sec1Text;
+    padding: 4rem 5.5rem; }
+    .main .section1 .sec1Text span {
+      font-weight: bold;
+      color: #535353;
+      border-bottom: 2px solid #0dafaf; }
+    .main .section1 .sec1Text h2 {
+      color: #0dafaf;
+      margin-top: 1rem;
+      margin-left: 2rem;
+      font-size: 1.8rem; }
+    .main .section1 .sec1Text .subtitle {
+      margin-left: 2rem;
+      font-weight: bold;
+      color: #535353;
+      margin-bottom: 2rem; }
+    .main .section1 .sec1Text .info {
+      margin-left: 2rem;
+      margin-right: 10rem;
+      color: #535353; }
+  .main .section1 .sec1Photo-small1 {
+    grid-area: sec1Photo-small1;
+    background: url(../assets/main-section1-firstImage.webp);
+    background-size: cover; }
+  .main .section1 .sec1Photo-small2 {
+    grid-area: sec1Photo-small2;
+    background: url(../assets/main-section1-secondImage.webp);
+    background-size: cover; }
+  .main .section1 .sec1Photo-big {
+    grid-area: sec1Photo-big;
+    background: url(../assets/main-section1-bigImage.webp);
+    background-size: cover; }
+
+.section2 {
+  padding: 3rem 4rem; }
+  .section2 h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #0dafaf;
+    font-size: 1.8rem; }
+  .section2 .sec2Servicios {
+    display: flex;
+    justify-content: center;
+    gap: 9rem;
+    margin-top: 6rem; }
+    .section2 .sec2Servicios .cardServicios {
+      width: 15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: start; }
+      .section2 .sec2Servicios .cardServicios h3 {
+        text-align: center; }
+      .section2 .sec2Servicios .cardServicios img {
+        max-width: 80%;
+        height: auto;
+        align-self: center; }
+      .section2 .sec2Servicios .cardServicios p {
+        text-align: center; }
+    .section2 .sec2Servicios .hunting h3 {
+      font-size: 1.5rem;
+      color: #535353;
+      border-bottom: 3px solid #26dd83; }
+    .section2 .sec2Servicios .renta h3 {
+      font-size: 1.5rem;
+      color: #535353;
+      border-bottom: 3px solid #5febde; }
+    .section2 .sec2Servicios .benchmark h3 {
+      font-size: 1.5rem;
+      color: #535353;
+      border-bottom: 3px solid #fee101; }
+
+.section3 {
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  gap: 4rem; }
+  .section3 h2 {
+    color: #2c2c2c;
+    font-size: 2rem; }
+    .section3 h2 span {
+      color: #0a8d8d; }
+  .section3 div {
+    background: #0a8d8d;
+    padding: .5rem 1.3rem;
+    border-radius: 5px;
+    cursor: pointer; }
+    .section3 div a {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.3rem; }
+
+.footer {
+  background: #30343f;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 3fr 3fr 1fr;
+  grid-template-areas: "footerLogo footerMenu-Services footerMenu-Partners footerSocial" "footerLogo footerMenu-Contents footerMenu-Candidates footerSocial" "footerCredits footerCredits footerCredits footerCredits";
+  gap: 1.5rem;
+  padding-top: 3rem;
+  border-radius: 0 0 1rem 1rem; }
+  .footer .footerLogo {
+    grid-area: footerLogo;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .footer .footerLogo img {
+      width: 7rem; }
+  .footer nav {
+    align-self: center; }
+    .footer nav h4 {
+      color: #0dafaf; }
+    .footer nav li {
+      color: #0dafaf; }
+      .footer nav li a {
+        text-decoration: none;
+        color: #e7e7e7; }
+        .footer nav li a:hover {
+          border-bottom: 2px solid #0dafaf; }
+  .footer .footerMenu-Services {
+    grid-area: footerMenu-Services; }
+  .footer .footerMenu-Contents {
+    grid-area: footerMenu-Contents; }
+  .footer .footerMenu-Partners {
+    grid-area: footerMenu-Partners; }
+  .footer .footerMenu-Candidates {
+    grid-area: footerMenu-Candidates; }
+  .footer .footerSocial {
+    grid-area: footerSocial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; }
+    .footer .footerSocial img {
+      filter: invert(99%) sepia(0%) saturate(166%) hue-rotate(288deg) brightness(117%) contrast(100%);
+      cursor: pointer; }
+      .footer .footerSocial img:hover {
+        filter: invert(60%) sepia(100%) saturate(334%) hue-rotate(131deg) brightness(100%) contrast(91%); }
+  .footer .footerCredits {
+    grid-area: footerCredits;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+    border-radius: 0 0 1rem 1rem; }
+    .footer .footerCredits span {
+      color: #fff;
+      padding: 1rem 0; }

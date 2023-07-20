@@ -1,0 +1,64 @@
+.section2 {
+    padding: 3rem 4rem;
+
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        color: $textCyan;
+        font-size: 1.8rem;
+    
+    }
+
+    .sec2Servicios {
+        display: flex;
+        justify-content: center;
+        gap: 9rem;
+        margin-top: 6rem;
+
+        .cardServicios {
+            width: 15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+            h3 {
+                text-align: center;
+            }
+
+            img {
+                max-width: 80%;
+                height: auto;
+                align-self: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .hunting {
+            h3 {
+                font-size: 1.5rem;
+                color: $textGrey;
+                border-bottom: 3px solid $colorHunting;
+            }
+        }
+
+        .renta {
+            h3 {
+                font-size: 1.5rem;
+                color: $textGrey;
+                border-bottom: 3px solid $colorRenta;
+            } 
+        }
+
+        .benchmark {
+            h3 {
+                font-size: 1.5rem;
+                color: $textGrey;
+                border-bottom: 3px solid $colorBenchmark;
+            }
+        }
+    }
+
+}
