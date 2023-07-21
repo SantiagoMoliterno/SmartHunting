@@ -9,9 +9,6 @@
 
             .headerNav {
                 position: relative;
-                img {
-
-                }
 
                 .headerNav-menu {
                     position: absolute;
@@ -26,7 +23,7 @@
                     display: block;
                     color: $textWhite;
                     font-size: 2rem;
-                    margin-right: 50px;
+                    margin-right: 20px;
                 }
             }
         }
@@ -40,6 +37,13 @@
             flex-direction: column;
             gap: 2rem;
             height: auto;
+
+            .headerNav {
+                img {
+                    height: 5rem;
+                    margin-top: 15px;
+                }
+            }
 
             .headerImage {
                 display: none;
@@ -59,7 +63,25 @@
 }
 
 @media screen and (max-width: 600px) {
-    
+    body {
+        .header {
+            .headerText {
+                h1 {
+                    font-size: 2rem;
+
+                    .line2 {
+                        font-size: 2.31rem;
+                    }
+                    .line3 {
+                        font-size: 2.61rem;
+                    }
+                    .line4 {
+                        font-size: 2.68rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {

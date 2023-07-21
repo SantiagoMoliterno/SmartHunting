@@ -318,7 +318,7 @@ body {
           display: block;
           color: #fff;
           font-size: 2rem;
-          margin-right: 50px; } }
+          margin-right: 20px; } }
 
 @media screen and (max-width: 1024px) {
   body .header {
@@ -326,9 +326,22 @@ body {
     flex-direction: column;
     gap: 2rem;
     height: auto; }
+    body .header .headerNav img {
+      height: 5rem;
+      margin-top: 15px; }
     body .header .headerImage {
       display: none; }
     body .header .headerSocial {
       justify-content: center;
       padding: 1rem 0;
       gap: 1rem; } }
+
+@media screen and (max-width: 600px) {
+  body .header .headerText h1 {
+    font-size: 2rem; }
+    body .header .headerText h1 .line2 {
+      font-size: 2.31rem; }
+    body .header .headerText h1 .line3 {
+      font-size: 2.61rem; }
+    body .header .headerText h1 .line4 {
+      font-size: 2.68rem; } }
