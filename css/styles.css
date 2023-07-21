@@ -304,7 +304,8 @@ body {
     padding: 0;
     overflow-x: hidden; }
     body .header {
-      width: 100vw; }
+      width: 100vw;
+      border-radius: 0; }
       body .header .headerNav {
         position: relative; }
         body .header .headerNav .headerNav-menu {
@@ -318,7 +319,9 @@ body {
           display: block;
           color: #fff;
           font-size: 2rem;
-          margin-right: 20px; } }
+          margin-right: 20px; }
+    body .main {
+      width: 100vw; } }
 
 @media screen and (max-width: 1024px) {
   body .header {
@@ -334,7 +337,25 @@ body {
     body .header .headerSocial {
       justify-content: center;
       padding: 1rem 0;
-      gap: 1rem; } }
+      gap: 1rem; }
+  body .main .section1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "sec1Text" "sec1Aside";
+    height: auto; }
+    body .main .section1 .sec1Aside {
+      height: auto; }
+      body .main .section1 .sec1Aside .asideTop {
+        display: none; }
+      body .main .section1 .sec1Aside .asideBottom {
+        height: inherit; }
+        body .main .section1 .sec1Aside .asideBottom a {
+          margin-top: 1rem; }
+    body .main .section1 .sec1Text {
+      padding: 2rem 1rem; }
+      body .main .section1 .sec1Text .info {
+        margin-right: 0; } }
 
 @media screen and (max-width: 600px) {
   body .header .headerText h1 {
