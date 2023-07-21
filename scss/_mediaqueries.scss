@@ -31,6 +31,10 @@
         .main {
             width: 100vw;
         }
+
+        .footer {
+            width: 100vw;
+        }
     }
 }
 
@@ -93,6 +97,29 @@
                 }
             }
         }
+
+        .footer {
+            grid-template-columns: auto auto;
+            grid-template-rows: 1.5fr 1.5fr 1fr 1fr;
+            grid-template-areas: 
+            "footerMenu-Services footerMenu-Partners"
+            "footerMenu-Contents footerMenu-Candidates"
+            "footerSocial footerSocial"
+            "footerCredits footerCredits";
+            gap: .8rem;
+            padding-top: 1rem;
+            border-radius: 0;
+
+            .footerLogo {
+                display: none;
+            }
+
+            .footerMenu-Services, .footerMenu-Contents, .footerMenu-Partners, .footerMenu-Candidates {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     }
 }
 
@@ -144,11 +171,22 @@
                 gap: 1rem;
             }
         }
+
+        .footer {
+            .footerCredits {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 480px) {
-    
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 320px) {

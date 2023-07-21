@@ -320,6 +320,8 @@ body {
           font-size: 2rem;
           margin-right: 20px; }
     body .main {
+      width: 100vw; }
+    body .footer {
       width: 100vw; } }
 
 @media screen and (max-width: 1024px) {
@@ -354,7 +356,20 @@ body {
     body .main .section1 .sec1Text {
       padding: 2rem 1rem; }
       body .main .section1 .sec1Text .info {
-        margin-right: 0; } }
+        margin-right: 0; }
+  body .footer {
+    grid-template-columns: auto auto;
+    grid-template-rows: 1.5fr 1.5fr 1fr 1fr;
+    grid-template-areas: "footerMenu-Services footerMenu-Partners" "footerMenu-Contents footerMenu-Candidates" "footerSocial footerSocial" "footerCredits footerCredits";
+    gap: .8rem;
+    padding-top: 1rem;
+    border-radius: 0; }
+    body .footer .footerLogo {
+      display: none; }
+    body .footer .footerMenu-Services, body .footer .footerMenu-Contents, body .footer .footerMenu-Partners, body .footer .footerMenu-Candidates {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
 
 @media screen and (max-width: 768px) {
   body .main .section2 {
@@ -379,4 +394,13 @@ body {
       font-size: 2.68rem; }
   body .main .section3 {
     flex-direction: column;
-    gap: 1rem; } }
+    gap: 1rem; }
+  body .footer .footerCredits {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
+
+@media screen and (max-width: 480px) {
+  .footer {
+    display: flex;
+    flex-direction: column; } }
